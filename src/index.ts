@@ -103,14 +103,12 @@ async function processFile(filePath: string, lintingComment: string, outputPath:
     }
   });
 
-  // Process each node asynchronously and collect replacements
   const edits = await Promise.all(nodesToProcess.map(async node => {
     const originalTemplate = generate(node).code;
     const formattedCode = await lint(originalTemplate);
     return { start: node.start!, end: node.end!, replacement: formattedCode };
   }));
 
-  // Apply edits from the last to the first to not mess up the indices
   const outputCode = applyEdits(originalCode, edits);
   const highlightedCode = highlight(outputCode, { language: 'typescript', ignoreIllegals: true });
 
@@ -121,12 +119,11 @@ async function processFile(filePath: string, lintingComment: string, outputPath:
 }
 
 function applyEdits(code: string, edits: { start: number; end: number; replacement: string }[]): string {
-  edits.sort((a, b) => b.start - a.start); // Sort edits to apply from last to first
+  edits.sort((a, b) => b.start - a.start); 
   for (const edit of edits) {
     code = code.substring(0, edit.start) + edit.replacement + code.substring(edit.end);
   }
   return code;
 }
 
-// Example usage
 processFile('exhibitA.js', 'tsx', './output.ts').catch(console.error);
