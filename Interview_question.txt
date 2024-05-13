@@ -1,0 +1,10 @@
+Edge Cases:
+   1. Nested template literals: If there are template literals within template literals, and they both have the linting comment, my current logic might not correctly distinguish and process them independently.
+   2. Large files: Handling very large JavaScript files might lead to performance issues, especially with memory usage due to storing large ASTs and the processing required for traversing and regenerating these ASTs.
+   3. Incorrect or malformed JavaScript syntax: If the input JavaScript has syntax errors, parsing will fail.
+
+Time Complexity:
+   O(n * m): Where n is the number of nodes in the AST and m is the average time taken to lint and replace nodes. The traversal of the AST is linear concerning the number of nodes, but each linting operation, which includes parsing, formatting, and regenerating parts of the AST, adds significant overhead.
+
+Space Complexity
+   O(n): Space complexity is linear in relation to the size of the AST. Since the entire file is loaded into memory as an AST, large files can significantly increase memory usage.

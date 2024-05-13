@@ -1,0 +1,20 @@
+Question 1: Document is undefined
+
+    export async function arrayToBase64(array: Uint8Array) {
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+
+    const imageData = await decode(canvas, ctx!, array);
+
+    return imageData;
+    }
+
+Running the above function, returns an error `document is undefined`. 
+
+1. Suggest a reason for the error
+    Solution: 
+    The error occues because the code attempts to the use the 'Document' object which is a part of the Browser Document Object Model which is only available in a brower environment and not in a Node.js environment. 
+
+2. Suggest a method to solve the error
+    Solution: 
+    Make sure that you are running the code in a brower environment and that the document object is defined in this browser environment. Another solution is to modify the code to work in a Node.js environment and you might need to re-implement this functionality.

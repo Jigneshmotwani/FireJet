@@ -1,0 +1,42 @@
+## Question 3: Cannot call API
+
+Trying to call the APIs at [https://api.github.com](https://api.github.com/) from the [FireJet Tweak](https://www.firejet.io/tweak) frontend throws an error.
+
+1. Suggest the type of error and their reason
+    Solution:
+    The error messages that I see is this:
+        WebSocket connection to 'wss://ws.hotjar.com/api/v2/client/ws?v=7&site_id=2878298' failed: The operation couldn’t be completed. Socket is not connected
+        Websocket close was unclean: 1006
+    This indicates a problem with establishing a websocket connection. Some reasons for such an error are:
+    - The server at 'ws.hotjar.com' may be down or temporily unavailable preventing the websocket connection to be established.
+    - The url or certain parameters like side_id may be incorrect.
+
+
+2. Suggest a way to overcome the error, with some javascript snippets to support your answer
+    Solution:
+    - Double-check the WebSocket URL and any parameters you are using to ensure they are correct and expected by the server.
+    - Check if there are any status updates or known issues reported for Hotjar services that might affect WebSocket connections.
+    - Implement error handling in the websocket connection code. For example:
+
+        function setupWebSocket() {
+            const socket = new WebSocket('wss://ws.hotjar.com/api/v2/client/ws?v=7&site_id=2878298');
+
+            socket.onopen = function() {
+                console.log('WebSocket Connection established');
+            };
+
+            socket.onerror = function(error) {
+                console.error('WebSocket Error:', error);
+            };
+
+            socket.onclose = function(event) {
+                console.log('WebSocket closed. Attempting to reconnect...');
+                if (!event.wasClean) {
+                // Implement reconnection logic or notify user
+                setTimeout(setupWebSocket, 5000); // Try to reconnect every 5 seconds
+                }
+            };
+            }
+
+            setupWebSocket();
+

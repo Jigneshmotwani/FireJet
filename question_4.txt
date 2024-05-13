@@ -1,0 +1,29 @@
+## Question 4: Get styles from element in iFrame
+
+    var iframe = document.getElementById("myFrame");
+    var elmnt = iframe.contentWindow.document.getElementsByTagName("H1")[0];
+    const styles = getComputedStyle(elmnt)
+
+When trying the above code to get the styles from an element inside of the [FireJet Tweak](https://www.notion.so/5cfbc0a680c04add998d28f5c253dd12?pvs=21) iframe, the code does not work.
+
+1. Suggest why the code does not work
+    Solution:
+    1. Cross-Origin Frame: If the iframe (myFrame) is loading content from a different origin (i.e., a different domain, protocol, or port) than the parent document, the browser's Same-Origin Policy will prevent access to the content inside the iframe.
+    2. Iframe Content Not Loaded: When trying to access elements inside an iframe, you must ensure that the iframe content is fully loaded before attempting to access its elements. If the script runs before the iframe document is completely loaded, it won't find the H1 elements, leading to errors.
+
+2. Suggest and alternative method of getting the styles.
+    Solution:
+            var iframe = document.getElementById("myFrame");
+            iframe.onload = function() {
+                try {
+                    var elmnt = iframe.contentWindow.document.getElementsByTagName("H1")[0];
+                    if (elmnt) {
+                        const styles = getComputedStyle(elmnt);
+                        console.log(styles.cssText); 
+                    } else {
+                        console.log('No H1 element found');
+                    }
+                } catch (error) {
+                    console.error("Error accessing iframe content:", error.message);
+                }
+            };

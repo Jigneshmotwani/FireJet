@@ -1,0 +1,14 @@
+## Question 6: `fs is undefined`
+
+When using build tools like vite or tailwind, sometimes we encounter the error `fs is undefined`
+
+1. Name some cases where fs is defined and some cases where it is undefined
+    Solution:
+    - Cases where fs is defined: Sever side JavaScript, During build processes
+    - Cases where fs is undefined: Client side JavaScript, server side rendering
+
+2. In the case that fs is undefined, suggest how we can make fs defined, so that we can continue using build tools like vite and tailwind
+    Solution:
+    - Ensure that any usage of fs is confined to the server-side or build-time scripts. For example, read configuration files or assets during build time, not runtime.
+    - If you need file interactions that require fs, consider creating an API that handles these operations on the server. The client-side can interact with these APIs to perform needed file operations securely.
+    - For storage needs in the browser, consider using localStorage for small amounts of data or IndexedDB for larger, structured storage.

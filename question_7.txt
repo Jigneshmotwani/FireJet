@@ -1,0 +1,29 @@
+## Question 7: For loop not working
+
+    const users = {}
+
+    userIds.forEach(async (userId) => {
+        const user = await getUser(userId)
+        users[userId] = user
+    })
+
+    console.log(users)
+
+1. Explain why the above code is not working
+    Solution:
+    The for loop does not wait for async function getUser to complete before moving on to the next iteration. Which leads to 2 issues:
+    - Asynchronous Execution Inside Synchronous Loop: The forEach loop does not inherently handle the promises returned by the async callback function inside it. As a result, all the calls to getUser are initiated almost simultaneously without waiting for the previous one to complete.
+    - Premature Logging: The console.log(users) statement executes before any of the asynchronous operations have completed. Since JavaScript does not block the execution while awaiting promises inside a forEach loop, users is logged before it is populated, likely resulting in an empty object or a partially filled object depending on the timing of the asynchronous calls.
+
+2. Explain how to fix the above code
+    Solution:
+    Change for loop to for-of loop which allows the use of 'await' directly within the loop:
+
+            const users = {};
+            (async () => {
+            for (const userId of userIds) {
+                const user = await getUser(userId);
+                users[userId] = user;
+            }
+            console.log(users);
+            })();

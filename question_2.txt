@@ -1,0 +1,11 @@
+Question 2: Error in try {} catch {} block
+
+    try {
+    figma.showUI('<div>Hello</div>');
+    } catch {}
+
+Running the above function during codegen mode causes the FireJet Figma Plugin to crash with the error `figma_app.min.js.br:5 Error: in showUI: Cannot show UI`
+
+1. The code crashes because the showUI() command is not allowed in codegen mode. However, suggest why it is still crashing despite being in the `try` block.
+    Solution: 
+    The reason the code crashes despite being in the `try` block, is that the 'catch' block has not been properly defined. In JavaScript, if a try block is used to catch errors, the catch block needs to explicitly specify an exception handler. 
