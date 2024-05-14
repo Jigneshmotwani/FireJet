@@ -1,0 +1,75 @@
+Landing
+├── T[Logo-FireJet, Button, Account circle]
+│   ├── Logo-FireJet
+│   └── T[Button, Account circle]
+│       ├── Button
+│       │   └── Sign Up
+│       └── Account circle
+├── T[Figma, Design, to]
+│   ├── Figma
+│   ├── Design
+│   └── to
+├── T[Frame 8, Code]
+│   ├── Frame 8
+│   │   └── Readable
+│   └── Code
+├── Turn your Figma components into human-readable React code with a single *CLICK*
+├── T[Button]
+│   └── Button
+│       └── Sign Up
+├── T[Frame 1, Human Readability, Code readability optimized, Learn More, bx:arrow-back]
+│   ├── Frame 1
+│   │   └── download (2)
+│   ├── Human Readability
+│   ├── Code readability optimized
+│   └── T[Learn More, bx:arrow-back]
+│       ├── Learn More
+│       └── bx:arrow-back
+├── T[Frame 1, Layout Responsive, Fully responsive code outputs, Learn More, bx:arrow-back]
+│   ├── Frame 1
+│   │   └── download (2)
+│   ├── Layout Responsive
+│   ├── Fully responsive code outputs
+│   └── T[Learn More, bx:arrow-back]
+│       ├── Learn More
+│       └── bx:arrow-back
+├── T[Frame 1, Pixel Perfection, 100% pixel perfection, Learn More, bx:arrow-back]
+│   ├── Frame 1
+│   │   └── download (2)
+│   ├── Pixel Perfection
+│   ├── 100% pixel perfection
+│   └── T[Learn More, bx:arrow-back]
+│       ├── Learn More
+│       └── bx:arrow-back
+├── T[Frame 1, Tailwind CSS, Generate code in Tailwind, Learn More, bx:arrow-back]
+│   ├── Frame 1
+│   │   └── download (2)
+│   ├── Tailwind CSS
+│   ├── Generate code in Tailwind
+│   └── T[Learn More, bx:arrow-back]
+│       ├── Learn More
+│       └── bx:arrow-back
+├── T[UserCard]
+│   ├── Text
+│   └── T[Philip Raw Hi Fidelity - Square 1, UserName, UserJob]
+│       ├── Philip Raw Hi Fidelity - Square 1
+│       ├── UserName
+│       └── UserJob
+├── Don’t take our word for it
+├── Trust our customers
+└── T[Footer]
+    ├── T[Get in Touch, Links, Subscribe]
+    │   ├── Get in Touch
+    │   │   ├── fluent:call-16-filled
+    │   │   ├── ic:round-email
+    │   │   ├── file-icons:telegram
+    │   │   └── carbon:location-filled
+    │   ├── Links
+    │   │   ├── Home
+    │   │   ├── Pricing
+    │   │   ├── About Us
+    │   │   └── Blog
+    │   └── Subscribe
+    │       ├── Get our BEST updates
+    │       ├── Frame 4931, Button
+    │       └── Set the world on Fire🔥

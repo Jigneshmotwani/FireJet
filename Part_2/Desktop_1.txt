@@ -1,0 +1,60 @@
+Landing
+├── T[Logo-FireJet, Docs, Blog, Pricing, Discord, Login, Button, Account circle]
+│   ├── Logo-FireJet
+│   └── T[Docs, Blog, Pricing, Discord, Login, Button, Account circle]
+│       ├── Docs
+│       ├── Blog
+│       ├── Pricing
+│       ├── Discord
+│       ├── Login
+│       ├── Button
+│       │   └── Sign Up
+│       └── Account circle
+├── T[Figma, Design, to, Frame 8, Code]
+│   ├── Figma
+│   ├── Design
+│   ├── to
+│   ├── Frame 8
+│   │   └── Readable
+│   └── Code
+├── Turn your Figma components into human-readable React code with a single *CLICK*
+├── T[Button]
+│   └── Button
+│       └── Sign Up
+├── T[T[Frame 1, Human Readability, Code readability optimized, Learn More, bx:arrow-back], Import from Figma, Build your application]
+│   ├── Frame 1
+│   │   ├── download (2)
+│   │   ├── Human Readability
+│   │   ├── Code readability optimized
+│   │   └── T[Learn More, bx:arrow-back]
+│   │       ├── Learn More
+│   │       └── bx:arrow-back
+│   └── Import from Figma
+│       ├── Build your application
+│       └── T[Learn More, bx:arrow-back]
+├── Don’t take our word for it
+├── Trust our customers
+├── T[UserCard, UserCard, UserCard]
+│   ├── UserCard
+│   │   ├── Text
+│   │   └── T[Philip Raw Hi Fidelity - Square 1, UserName, UserJob]
+│   │       ├── Philip Raw Hi Fidelity - Square 1
+│   │       ├── UserName
+│   │       └── UserJob
+│   └── UserCard (repeated structure as above)
+└── T[Footer]
+    ├── T[Get in Touch, Links, Subscribe]
+    │   ├── Get in Touch
+    │   │   ├── fluent:call-16-filled
+    │   │   ├── ic:round-email
+    │   │   ├── file-icons:telegram
+    │   │   └── carbon:location-filled
+    │   ├── Links
+    │   │   ├── Home
+    │   │   ├── Pricing
+    │   │   ├── About Us
+    │   │   └── Blog
+    │   └── Subscribe
+    │       ├── Get our BEST updates
+    │       ├── Frame 4931, Button
+    │       └── Set the world on Fire🔥
