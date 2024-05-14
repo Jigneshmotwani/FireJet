@@ -414,7 +414,7 @@ The merged representation after running through the algorithm is
 
 #### If m is the number of elements in the mobile IR and n is the number of elements in the desktop IR,  
 #### Time Complexity = O(n⋅m+m<sup>2</sup>)  
-####cSpace Complexity = O(n+m)
+#### Space Complexity = O(n+m)
 
 ### Part 4: List any possible edge cases with your algorithm
 1. Elements that have interactive behaviors or dynamic properties that change based on user interactions.
